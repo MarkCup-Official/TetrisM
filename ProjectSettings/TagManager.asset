@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - tnt
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - tnt
+  - mob
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 2887686107
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Blocks
+    uniqueID: 3046789975
+    locked: 0
+  - name: Water
+    uniqueID: 2112239321
+    locked: 0
+  - name: UI
+    uniqueID: 3249748695
+    locked: 0
