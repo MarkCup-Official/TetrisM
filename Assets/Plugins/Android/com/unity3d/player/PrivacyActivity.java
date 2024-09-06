@@ -47,12 +47,12 @@ public class PrivacyActivity extends Activity implements DialogInterface.OnClick
     private void ShowPrivacyDialog() {
         // 创建一个文字布局
         TextView textView = new TextView(this);
-        textView.setText("欢迎来到 TetrisM!\n在开始游玩前, 请仔细阅读并同意我们的隐私政策:");
+        textView.setText("Welcom to TetrisM!\nBefore you start, you need to carefully read and agree to our Privacy Policy.");
         textView.setPadding(64, 0, 64, 0);
 
         // 创建一个超链接文字布局
         TextView textView2 = new TextView(this);
-        String privacyText = "《TetrisM 用户协议》";
+        String privacyText = "TetrisM Privacy Policy";
         SpannableString spannableString = new SpannableString(privacyText);
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
@@ -76,9 +76,9 @@ public class PrivacyActivity extends Activity implements DialogInterface.OnClick
         AlertDialog.Builder privacyDialog = new AlertDialog.Builder(this);
         privacyDialog.setCancelable(false);
         privacyDialog.setView(layout);
-        privacyDialog.setTitle("TetrisM 用户协议");
-        privacyDialog.setNegativeButton("不同意并退出", this);
-        privacyDialog.setPositiveButton("同意并进入游戏", this);
+        privacyDialog.setTitle("TetrisM Privacy Policy");
+        privacyDialog.setNegativeButton("Disagree", this);
+        privacyDialog.setPositiveButton("Agree", this);
         privacyDialog.create().show();
     }
 

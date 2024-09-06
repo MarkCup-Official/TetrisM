@@ -1257,6 +1257,8 @@ GameObject:
   m_Component:
   - component: {fileID: 636488554}
   - component: {fileID: 636488553}
+  - component: {fileID: 636488555}
+  - component: {fileID: 636488556}
   m_Layer: 0
   m_Name: mySystem
   m_TagString: Untagged
@@ -1291,6 +1293,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636488555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636488552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbd2d1d5c100dd44b356d3817482908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 0}
+  text: {fileID: 1791319886}
+  strings:
+  - 'Press A to start
+
+
+    Move: Left and Right keys
+
+    Drop: Down key
+
+    Rotate
+    right: B
+
+    Quick drop: A'
+  - "Pressione A para come\xE7ar\n\nMover: Teclas de seta esquerda e direita\nDescer:
+    Tecla de seta para baixo\nGirar para a direita: B\nQueda r\xE1pida: A"
+  - 'Tekan A untuk mulai
+
+
+    Bergerak: Tombol kiri dan kanan
+
+    Jatuh: Tombol
+    panah bawah
+
+    Putar kanan: B
+
+    Jatuh cepat: A'
+  - "\u0E01\u0E14 A \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19\n\n\u0E40\u0E04\u0E25\u0E37\u0E48\u0E2D\u0E19\u0E17\u0E35\u0E48:
+    \u0E1B\u0E38\u0E48\u0E21\u0E0B\u0E49\u0E32\u0E22\u0E41\u0E25\u0E30\u0E02\u0E27\u0E32\n\u0E15\u0E01:
+    \u0E1B\u0E38\u0E48\u0E21\u0E25\u0E39\u0E01\u0E28\u0E23\u0E25\u0E07\n\u0E2B\u0E21\u0E38\u0E19\u0E02\u0E27\u0E32:
+    B\n\u0E15\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E23\u0E27\u0E14\u0E40\u0E23\u0E47\u0E27:
+    A"
+  - "\u6309\u4E0B A \u5F00\u59CB\n\n\u79FB\u52A8: \u5DE6\u53F3\u6309\u952E\n\u4E0B\u843D:
+    \u4E0B\u65B9\u5411\u952E\n\u5411\u53F3\u65CB\u8F6C: B\n\u5FEB\u901F\u4E0B\u843D:
+    A"
+  - "\u6309\u4E0B A \u958B\u59CB\r\n\r\n\u79FB\u52D5: \u5DE6\u53F3\u6309\u9375\r\n\u4E0B\u843D:
+    \u4E0B\u65B9\u5411\u9375\r\n\u5411\u53F3\u65CB\u8F49: B\r\n\u5FEB\u901F\u4E0B\u843D:
+    A"
+--- !u!114 &636488556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636488552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11b2ca236efc5c40ac9a23b04fa8155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &669914144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -965.11, y: -476.3375}
+  m_AnchoredPosition: {x: -965.14, y: -476.59}
   m_SizeDelta: {x: -1287.819, y: -856.40497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791319886
@@ -2579,10 +2643,12 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0BA\u5F00\u59CB\n\n\u65B9\u5411\u952E\u5DE6\u53F3\u79FB\u52A8\u548C\u5FEB\u901F\u4E0B\u843D\nA\u5EFA\u5FEB\u901F\u5230\u5E95\nB\u952E\u65CB\u8F6C"
+  m_Text: "\u6309\u4E0B A \u5F00\u59CB\n\n\u79FB\u52A8: \u5DE6\u53F3\u6309\u952E\n\u4E0B\u843D:
+    \u4E0B\u65B9\u5411\u952E\n\u5411\u53F3\u65CB\u8F6C: B\n\u5FEB\u901F\u4E0B\u843D:
+    A"
 --- !u!222 &1791319887
 CanvasRenderer:
   m_ObjectHideFlags: 0

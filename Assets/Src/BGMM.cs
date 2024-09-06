@@ -22,6 +22,7 @@ public class BGMM : MonoBehaviour
 
     public static void FakeUpdate()
     {
+        return;
         if (!BGM.isPlaying)
         {
             int bbgm = bgm;

@@ -419,7 +419,7 @@ public class FallDown : MonoBehaviour
         //Debug.Log(name + ":Call 4 Down");
         d.Down();
         if(canNext)
-        Instantiate(next);
+            Instantiate(next);
         //Debug.Log(name + ":Call Camera Shake");
         GameObject.Find("Main Camera").GetComponent<MyCamera>().Shake(0,0.1f);
         MySystem.isHold = false;

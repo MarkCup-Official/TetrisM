@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LanguageManager : MonoBehaviour
 {
     public static Language language=Language.English;
+    public Dropdown drop;
     public Text text;
+    [TextArea]
     public List<string> strings;
 
     public enum Language
@@ -22,7 +23,10 @@ public class LanguageManager : MonoBehaviour
 
     public void Change()
     {
-
+        drop.value = Mathf.Clamp(drop.value, 0, 5);
+        language = (Language)drop.value;
+        text.text = strings[(int)language];
+        MySystem.WFileS("/language", "/language.cup", ((int)language).ToString());
     }
 
     private void Awake()
@@ -30,14 +34,36 @@ public class LanguageManager : MonoBehaviour
         string s= MySystem.RFileS("/language", "/language.cup",16);
         bool hasLanguage = int.TryParse(s, out int res);
 
-        if (res >= 0 && res <= 5)
+        if (hasLanguage)
         {
-            language = (Language)res;
+            if (res >= 0 && res <= 5)
+            {
+                language = (Language)res;
+
+                if (drop != null)
+                {
+                    drop.value = res;
+                }
+            }
+            else
+            {
+                language = Language.English;
+                MySystem.WFileS("/language", "/language.cup", "0");
+                if (drop != null)
+                {
+                    drop.value = 0;
+                }
+            }
         }
         else
         {
             language = Language.English;
             MySystem.WFileS("/language", "/language.cup", "0");
+            if (drop != null)
+            {
+                drop.value = 0;
+            }
         }
+        text.text = strings[(int)language];
     }
 }
