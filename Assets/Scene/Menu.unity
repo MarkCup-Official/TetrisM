@@ -2537,6 +2537,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22"
       m_Image: {fileID: 0}
+    - m_Text: "Espa\xF1ol"
+      m_Image: {fileID: 0}
     - m_Text: "\u7B80\u4F53\u4E2D\u6587"
       m_Image: {fileID: 0}
     - m_Text: "\u7E41\u9AD4\u4E2D\u6587"
@@ -2614,6 +2616,7 @@ MonoBehaviour:
   - "Toque para Come\xE7ar"
   - Ketuk untuk Memulai
   - "\u0E41\u0E15\u0E30\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19"
+  - Toca para empezar
   - "\u70B9\u51FB\u5C4F\u5E55\u5F00\u59CB\u6E38\u620F"
   - "\u9EDE\u64CA\u5C4F\u5E55\u958B\u59CB\u6E38\u6232"
 --- !u!1 &1272082487

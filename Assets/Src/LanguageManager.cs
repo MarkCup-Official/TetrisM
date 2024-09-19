@@ -17,13 +17,14 @@ public class LanguageManager : MonoBehaviour
         Portuguese=1,
         BahasaIndonesia=2,
         Thai=3,
-        ChineseSimplified=4,
-        Chinese=5,
+        Castellano = 4,
+        ChineseSimplified =5,
+        Chinese=6,
     }
 
     public void Change()
     {
-        drop.value = Mathf.Clamp(drop.value, 0, 5);
+        drop.value = Mathf.Clamp(drop.value, 0, 6);
         language = (Language)drop.value;
         text.text = strings[(int)language];
         MySystem.WFileS("/language", "/language.cup", ((int)language).ToString());
@@ -36,7 +37,7 @@ public class LanguageManager : MonoBehaviour
 
         if (hasLanguage)
         {
-            if (res >= 0 && res <= 5)
+            if (res >= 0 && res <= 6)
             {
                 language = (Language)res;
 
